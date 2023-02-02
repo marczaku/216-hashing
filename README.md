@@ -24,7 +24,7 @@ Also, a Binary Search might not be so nice
 Write Unit Tests for .NET's `HashSet` and `Dictionary` classes.
 
 Features:
-- HashSet
+- `HashSet<T>`
   - You can insert items `Insert`
     - It returns true, if the item was not inside already
     - It returns false, if the item was inside already
@@ -36,6 +36,22 @@ Features:
     - After removing, it should not be inside anymore
     - It returns false, if the item was not inside
   - You can enumerate the collection to get all items that are inside
+
+- `Dictionary<TKey, TValue>`
+  - You can add items for new keys using `Add`
+    - It throws an exception, if an item for that Key exists already.
+  - You can check, whether a certain key is being used using `ContainsKey`
+    - It returns true, if an item with that Key exists
+    - It returns false, if no item with that Key exists, yet
+  - You can receive a value for a Key using `[] get`
+    - It throws an Exception, if no item with that Key exists
+    - It returns the Value for the given Key, if it exists
+  - You can replace a value for a Key using `[] set`
+    - It adds a value for the key, if the key does not exist, yet
+    - It replaces the value for the key, if the key is already in use
+  - You can remove a value for a Key using `Remove`
+    - It throws an Exception, if no item with that Key exists
+    - It removes the value for that Key, if it exists
 
 ## Excellent Criteria
 Guess what? Implement a `TurboHashSet<T>`.
@@ -57,11 +73,11 @@ The following Methods:
 - `bool Exists(T item)` returns true, if it is inside
 - `bool Remove(T item)` returns `false`, if it was not inside, else it removes it and returns `true`
 
-Internal Method:
+## Bonus (Easy)
+- Write your own class with a Hashing-Function
+
+## Bonus (Intermediate)
 - `Resize` which will increase the buffer size, if necessary (Bonus)
 
 ## Bonus (Hard)
 - Coalesced Hashing
-
-## Bonus (Intermediate)
-- Write your own class with a Hashing-Function
