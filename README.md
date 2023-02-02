@@ -21,6 +21,23 @@ Also, a Binary Search might not be so nice
 - Identifying: Finding an Object through its ID
 
 ## Passing Criteria
+Write Unit Tests for .NET's `HashSet` and `Dictionary` classes.
+
+Features:
+- HashSet
+  - You can insert items `Insert`
+    - It returns true, if the item was not inside already
+    - It returns false, if the item was inside already
+  - You can check, whether an item is inside `Contains`
+    - It returns true, if the item is inside
+    - It returns false, if the item is not inside
+  - You can remove items `Remove`
+    - It returns true, if the item was inside
+    - After removing, it should not be inside anymore
+    - It returns false, if the item was not inside
+  - You can enumerate the collection to get all items that are inside
+
+## Excellent Criteria
 Guess what? Implement a `TurboHashSet<T>`.
 
 You will need:
@@ -42,9 +59,6 @@ The following Methods:
 
 Internal Method:
 - `Resize` which will increase the buffer size, if necessary (Bonus)
-
-## Excellent Criteria
-- `TurboDictionary<TKey, TValue>`
 
 ## Bonus (Hard)
 - Coalesced Hashing

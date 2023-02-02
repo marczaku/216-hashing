@@ -168,7 +168,8 @@ Then a Linear Search has catastrophic performance: `O(n)`
 
 Also, a Binary Search might not be so nice
 - The complexity of `O(log n)` might be not good enough (even though it's extremely good)
-- Or the items might not be clearly orderable (e.g. what order do you put Colors in? Or Transforms?)
+- Or the items might not be clearly orderable (e.g. what order do you put Colors in? Or Transforms? Or Heroes?)
+- Or the value by which you could order items changes so often that you'd have to reorder your list too often
 
 # Inspiration: Static Array
 
